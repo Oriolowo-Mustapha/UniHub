@@ -6,5 +6,5 @@ public class Club:BaseEntity
     public string Desciption { get; set; }
     public Guid CreatorID { get; set; }
     public int? MemberCount { get; set; }
-    public ICollection<User> Members { get; set; }
+    public ICollection<User> Members { get; set; } = new List<User>();
 }

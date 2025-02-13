@@ -5,5 +5,4 @@ public enum NotificationType
     Like ,
     Comment ,
     Follow ,
-    ClubAnnouncement,
 }

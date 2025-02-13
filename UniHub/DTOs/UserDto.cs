@@ -47,7 +47,7 @@ namespace UniHub.DTOs
         public string Password { get; set; }
         
         [DataType(DataType.ImageUrl)]
-        public string ProfilePic { get; set; }
+        public IFormFile ProfilePic { get; set; }
         
         [StringLength(maximumLength: 100, MinimumLength = 5)]
         public string Bio { get; set; }
@@ -88,6 +88,16 @@ namespace UniHub.DTOs
     }
 
     public class LogInUserRequestModel
+    {
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+        
+        [Required] 
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+    }
+    public class SignUpUserRequestModel
     {
         [Required]
         [DataType(DataType.EmailAddress)]

@@ -4,11 +4,12 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>18180203-7b81-4f23-88ed-5451f4a8d7a1</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
       <Folder Include="Implementations\" />
-      <Folder Include="Interfaces\" />
+      <Folder Include="Interfaces\Services\" />
     </ItemGroup>
 
     <ItemGroup>

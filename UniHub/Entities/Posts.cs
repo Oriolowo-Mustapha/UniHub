@@ -9,6 +9,8 @@ public class Posts:BaseEntity
     public int? NoComments { get; set; }
     public string Visiblity { get; set; }
     public string MediaUrls { get; set; }
+    public User User { get; set; }
     public ICollection<Likes> Likes = new List<Likes>();
     public ICollection<Comments> Comments = new List<Comments>();
+    public ICollection<Repost> Reposts = new List<Repost>();
 }

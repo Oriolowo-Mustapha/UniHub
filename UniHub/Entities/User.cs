@@ -15,5 +15,9 @@ public class User : BaseEntity
     public int? NoFollowers { get; set; }
     public ICollection<UserFollow> Followers { get; set; } = new List<UserFollow>();
     public ICollection<Posts> Posts { get; set; } = new List<Posts>();
+    public ICollection<Repost> Reposts { get; set; } = new List<Repost>();
     public ICollection<Likes> Likes { get; set; } = new List<Likes>();
+    public ICollection<Club> Clubs { get; set; } = new List<Club>();
+    public ICollection<Events> Events { get; set; } = new List<Events>();
+    public ICollection<Notifications> Notifications { get; set; } = new List<Notifications>();
 }

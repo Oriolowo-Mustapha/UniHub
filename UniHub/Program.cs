@@ -1,4 +1,11 @@
+using UniHub.UniHubDbContext;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Add Database
+builder.Services.AddDbContext<UniHubContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString(name: "UniHubContext")));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

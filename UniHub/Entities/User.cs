@@ -6,10 +6,10 @@ public class User : BaseEntity
     public string FirstName { get; set; }
     public string Lastname { get; set; }
     public string Email { get; set; }
-    public Guid UniversityID { get; set; }
     public string Password { get; set; }
     public string ProfilePic { get; set; }
     public string Bio { get; set; }
+    public string Level { get; set; }
     public int? NoPosts { get; set; }
     public int? NoLikes { get; set; }
     public int? NoFollowers { get; set; }

@@ -9,10 +9,10 @@ namespace UniHub.DTOs
         public string FirstName { get; set; }
         public string Lastname { get; set; }
         public string Email { get; set; }
-        public Guid UniversityID { get; set; }
         public string Password { get; set; }
         public string ProfilePic { get; set; }
         public string Bio { get; set; }
+        public string Level { get; set; }
         public int? NoPosts { get; set; }
         public int? NoLikes { get; set; }
         public int? NoFollowers { get; set; }
@@ -36,15 +36,6 @@ namespace UniHub.DTOs
         [StringLength(maximumLength: 25, MinimumLength = 2)]
         public string Lastname { get; set; }
         
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
-        
-        public Guid UniversityID { get; set; }
-        
-        [Required] 
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
         
         [DataType(DataType.ImageUrl)]
         public IFormFile ProfilePic { get; set; }
@@ -78,7 +69,7 @@ namespace UniHub.DTOs
         public string Bio { get; set; }
     }
 
-    public class UpdateProfileRequestModel
+    public class UpdateProfilePicRequestModel
     {
         [DataType(DataType.ImageUrl)]
         public string ProfilePic { get; set; }
@@ -106,5 +97,18 @@ namespace UniHub.DTOs
         [Required] 
         [DataType(DataType.Password)]
         public string Password { get; set; }
+    }
+    
+    public class ChangePasswordRequestModel
+    {
+        [Required] 
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+    }
+    
+    public class UpdateBioRequestModel
+    {
+        [StringLength(maximumLength: 100, MinimumLength = 5)]
+        public string Bio { get; set; }
     }
 }

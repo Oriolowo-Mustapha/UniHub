@@ -12,11 +12,11 @@ public interface IUserRepository
     public Task<bool> DeleteUser(User User);
     public Task<User> LogIn(string email, string password);
     public Task<User> SignUp(string email, string password);
-    public Task<bool> ChangePassword(int userId,string newPassword);
-    public Task<bool> UpdateProfilePic(int userId, string imagePath);
-    public Task<bool> UpdateBio(int userId, string Bio);
-    public Task<bool> FollowUser(int FollowersId, int FollowingId);
-    public Task<bool> UnFollowUser(int FollowersId, int FollowingId);
+    public Task<bool> ChangePassword(Guid userId,string newPassword);
+    public Task<bool> UpdateProfilePic(Guid userId, string imagePath);
+    public Task<bool> UpdateBio(Guid userId, string Bio);
+    public Task<bool> FollowUser(Guid FollowersId, Guid FollowingId);
+    public Task<bool> UnFollowUser(Guid FollowersId, Guid FollowingId);
     public Task<IList<UserFollow>> GetAllFollowers();
-    public Task<IList<User>> UsersSuggestion(int UserId);
+    public Task<IList<User>> UsersSuggestion(Guid UserId);
 }

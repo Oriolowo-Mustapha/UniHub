@@ -10,7 +10,7 @@ namespace UniHub.DTOs
         public string Lastname { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string ProfilePic { get; set; }
+        public IFormFile ProfilePic { get; set; }
         public string Bio { get; set; }
         public string Level { get; set; }
         public int? NoPosts { get; set; }
@@ -62,9 +62,6 @@ namespace UniHub.DTOs
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         
-        [DataType(DataType.ImageUrl)]
-        public string ProfilePic { get; set; }
-        
         [StringLength(maximumLength: 100, MinimumLength = 5)]
         public string Bio { get; set; }
     }
@@ -72,10 +69,8 @@ namespace UniHub.DTOs
     public class UpdateProfilePicRequestModel
     {
         [DataType(DataType.ImageUrl)]
-        public string ProfilePic { get; set; }
+        public IFormFile ProfilePic { get; set; }
         
-        [StringLength(maximumLength: 100, MinimumLength = 5)]
-        public string Bio { get; set; }
     }
 
     public class LogInUserRequestModel

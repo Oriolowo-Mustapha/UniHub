@@ -6,6 +6,6 @@ public class Club : BaseEntity
 	public string Desciption { get; set; }
 	public Guid CreatorID { get; set; }
 	public int? MemberCount { get; set; }
-	public User Users { get; set; }
-	public ICollection<User> Members { get; set; } = new List<User>();
+	public string ProfilePic { get; set; }
+	public ICollection<User> Users { get; set; } = new List<User>();
 }

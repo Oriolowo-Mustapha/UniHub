@@ -52,7 +52,7 @@ public class UniHubContext : DbContext
 
 		// Club - User Relationship (One-to-Many)
 		modelBuilder.Entity<Club>()
-			.HasOne(c => c.Users)
+			.HasMany(c => c.Users)
 			.WithMany(u => u.Clubs);
 
 		// Events - User Relationship (Many-to-Many)

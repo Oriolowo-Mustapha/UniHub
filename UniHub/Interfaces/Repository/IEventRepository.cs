@@ -4,10 +4,9 @@ namespace UniHub.Interfaces.Repository;
 
 public interface IEventRepository
 {
-    public Task<Events> CreateEvent(Events events);
+    public Task<bool> CreateEvent(Events events);
     public Task<Events> GetEventById(Guid eventId); 
     public Task<Events> UpdateEvent(Events events); 
-    public Task<bool> DeleteEvent(Guid eventId); 
-    public Task<Events> GetEventByUserId(Guid userId); 
-    public Task<Events> GetEventByClubId(Guid clubId); 
+    public Task<bool> DeleteEvent(Events events); 
+    public Task<IList<Events>> GetEventByClubId(Guid clubId); 
 }

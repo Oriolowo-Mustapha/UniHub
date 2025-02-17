@@ -1,0 +1,250 @@
+:root {
+  --primary: #2A3B4F;
+  --secondary: #3AAFA9;
+  --accent: #FF6B6B;
+}
+
+.bg-primary { background-color: var(--primary) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.btn-primary { 
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+.btn-primary:hover {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.story-circle {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--secondary) !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.story-add {
+  background-color: var(--secondary) !important;
+  color: white;
+}
+
+.post-action {
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.post-action:hover {
+  color: var(--accent) !important;
+}
+
+
+/* Sidebar active link color */
+
+.nav-link {
+  color: #333 !important;
+  border-radius: 50px !important;
+  padding: 0.5rem 1rem !important;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Left sidebar icons */
+.nav-link .fas {
+  color: var(--secondary);
+}
+
+.nav-link.active {
+  background-color: rgba(58, 175, 169, 0.1) !important;
+  color: var(--secondary) !important;
+}
+
+.nav-link .fas {
+  margin-right: 10px;
+}
+
+.nav-link:hover {
+  background-color: rgba(58, 175, 169, 0.1) !important; /* Light version of secondary color */
+  color: var(--secondary) !important;
+}
+
+/* Mobile Navigation */
+.fixed-bottom .fas {
+  color: #6c757d; /* default color */
+  transition: color 0.3s;
+}
+
+.fixed-bottom a:hover .fas,
+.fixed-bottom a.active .fas {
+  color: var(--secondary);
+}
+
+/* Plus button in mobile nav */
+.fixed-bottom a:nth-child(3) .fas {
+  color: var(--secondary);
+}
+
+/* Follow Button Styles */
+.btn-follow {
+  background-color: var(--secondary);
+  color: white;
+  border: 1px solid var(--secondary);
+  transition: all 0.3s ease;
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-follow:hover {
+  background-color: var(--accent) ;
+  color: white;
+}
+
+.btn-follow.following {
+  background-color: transparent;
+  color: var(--secondary);
+}
+
+.btn-follow.following:hover {
+  background-color: var(--accent) !important;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Container and Card Styles */
+.card {
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Stories Container */
+.stories-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  border: none;
+}
+
+/* Create Post Container */
+.create-post {
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Feed Posts */
+#feed-container .card {
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+/* Suggested Accounts Container */
+.suggested-accounts {
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Left Sidebar Container */
+.col-lg-3 .sidebar-card {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Mobile Navigation */
+.fixed-bottom {
+  border-top: none !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.fixed-top {
+  border-bottom: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.stories-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  border: none;
+}
+
+@media (min-width: 992px) {
+  .stories-container::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .stories-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+}
+
+.like-button {
+  transition: all 0.3s ease;
+}
+
+.like-button.text-danger {
+  animation: likeAnimation 0.3s ease;
+}
+
+@keyframes likeAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Add these styles for comments */
+.comment-section {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.comment-item {
+  transition: all 0.3s ease;
+}
+
+.comment-content {
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem !important;
+}
+
+.comment-input {
+  border-radius: 20px;
+}
+
+.add-comment-btn {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  border-radius: 20px;
+}
+
+.add-comment-btn:hover {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+.form-control:focus {
+  border-color: var(--secondary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(58, 175, 169, 0.25) !important;
+  outline: 0 !important;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(58, 175, 169, 0.25) !important;
+}

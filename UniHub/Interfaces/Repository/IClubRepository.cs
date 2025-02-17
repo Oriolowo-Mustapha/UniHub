@@ -6,8 +6,11 @@ public interface IClubRepository
 {
     public Task<bool> CreateClub(Club club);
     public Task<Club> GetClubById(Guid clubId);
+    public Task<Club> GetClubByName(string clubName);
     public Task<Club> UpdateClub(Club club);
     public Task<bool> DeleteClub(Club club);
-    public Task<IList<Club>> GetMembersByClubId(Guid clubId);
-    public Task<IList<Club>> GetClubsByMemberId(User user);
+    public Task<bool> JoinClub(ClubMembers clubMembers);
+    public Task<bool> LeaveClub(ClubMembers clubMembers);
+    public Task<IList<ClubMembers>> GetMembersByClubId(Guid clubId);
+    public Task<IList<ClubMembers>> GetClubsByMemberId(Guid userId);
 }

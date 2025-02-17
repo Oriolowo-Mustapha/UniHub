@@ -1,0 +1,51 @@
+﻿@model UniHub.DTOs.SignUpUserRequestModel 
+
+@{
+    ViewBag.Title = "UniHub Sign Up";
+    Layout = "_SignUpLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniHub Sign Up</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">U</div>
+            <span class="logo-text">UniHub</span>
+        </div>
+        <div class="sidebar-content">
+            <h2>Connect with your campus community</h2>
+            <p>Join UniHub and stay connected with your classmates, events, and campus life.</p>
+        </div>
+        <div class="copyright">© 2025 UniHub. All rights reserved.</div>
+    </div>
+    <div class="main-content">
+        <div class="form-container">
+            <h1>Join UniHub</h1>
+            <form id="signupForm" asp-action="SignUp" asp-controller="User" method="post">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <p class="error-message" id="emailError"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <p class="error-message" id="passwordError"></p>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="login-link">Already have an account? <a asp-area="" asp-controller="User" asp-action="LogIn">Log in here</a></p>
+        </div>
+    </div>
+</div>
+<script src="/js/signup.js"></script>
+</body>
+</html> 

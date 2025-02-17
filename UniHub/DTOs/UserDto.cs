@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using UniHub.Entities;
 
 namespace UniHub.DTOs
 {
@@ -10,14 +11,12 @@ namespace UniHub.DTOs
         public string Lastname { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public IFormFile ProfilePic { get; set; }
+        public string ProfilePic { get; set; }
         public string Bio { get; set; }
         public string Level { get; set; }
-        public int? NoPosts { get; set; }
-        public int? NoLikes { get; set; }
         public int? NoFollowers { get; set; }
         public DateTime DateOfCreation { get; set; }
-        public ICollection<UserFollowDto> Followers { get; set; } = new List<UserFollowDto>();
+        public ICollection<UserFollow> Followers { get; set; } = new List<UserFollow>();
         public ICollection<PostDto> Posts { get; set; } = new List<PostDto>();
         public ICollection<LikesDto> Likes { get; set; } = new List<LikesDto>();
     }
@@ -42,6 +41,10 @@ namespace UniHub.DTOs
         
         [StringLength(maximumLength: 100, MinimumLength = 5)]
         public string Bio { get; set; }
+        
+        [Required]
+        [StringLength(maximumLength: 5, MinimumLength = 5)]
+        public string Level { get; set; }
     }
     
     public class UpdateUserRequestModel
@@ -64,6 +67,10 @@ namespace UniHub.DTOs
         
         [StringLength(maximumLength: 100, MinimumLength = 5)]
         public string Bio { get; set; }
+        
+        [Required]
+        [StringLength(maximumLength: 5, MinimumLength = 5)]
+        public string Level { get; set; }
     }
 
     public class UpdateProfilePicRequestModel

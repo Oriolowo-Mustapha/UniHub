@@ -1,0 +1,30 @@
+:root {
+    --primary: #2A3B4F;
+    --secondary: #3AAFA9;
+    --accent: #FF6B6B;
+    --text-primary: #333;
+    --text-light: #fff;
+    --background: #fff;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .past-event {
+    opacity: 0.6;
+  }
+  

@@ -31,6 +31,11 @@ public class NotificationRepository:INotificationRepository
         return notification;
     }
 
+    public async Task<Notifications> GetNotificationById(Guid NotificationId)
+    {
+        return await _uniHubContext.Notifications.FindAsync(NotificationId);
+    }
+
     public async Task<Notifications> UpdateNotificationStatus(Notifications notifications)
     {
         _uniHubContext.Notifications.Update(notifications);

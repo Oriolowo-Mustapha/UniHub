@@ -29,12 +29,6 @@ public class CreateCommentRequestModel
 public class UpdateCommentRequestModel
 {
     [Required]
-    public Guid PostID { get; set; }
-    
-    [Required]
-    public Guid UserID { get; set; } 
-    
-    [Required]
     [StringLength(maximumLength:500, MinimumLength = 10)]
     public string Content { get; set; }
 }

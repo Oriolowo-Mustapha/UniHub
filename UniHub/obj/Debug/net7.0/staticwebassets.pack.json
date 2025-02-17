@@ -5,12 +5,108 @@
       "PackagePath": "staticwebassets\\UniHub.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\clubpost.css",
+      "PackagePath": "staticwebassets\\css\\clubpost.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\components\\header.css",
+      "PackagePath": "staticwebassets\\css\\components\\header.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\components\\postpopup.css",
+      "PackagePath": "staticwebassets\\css\\components\\postpopup.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\events.css",
+      "PackagePath": "staticwebassets\\css\\events.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\joinclub.css",
+      "PackagePath": "staticwebassets\\css\\joinclub.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\onboarding.css",
+      "PackagePath": "staticwebassets\\css\\onboarding.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\sidebar.css",
+      "PackagePath": "staticwebassets\\css\\sidebar.css"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\signup.css",
+      "PackagePath": "staticwebassets\\css\\signup.css"
+    },
+    {
       "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\clubpost.js",
+      "PackagePath": "staticwebassets\\js\\clubpost.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\components.js",
+      "PackagePath": "staticwebassets\\js\\components.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\events.js",
+      "PackagePath": "staticwebassets\\js\\events.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\home.js",
+      "PackagePath": "staticwebassets\\js\\home.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\imagePreview.js",
+      "PackagePath": "staticwebassets\\js\\imagePreview.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\joinclub-data.js",
+      "PackagePath": "staticwebassets\\js\\joinclub-data.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\joinclub.js",
+      "PackagePath": "staticwebassets\\js\\joinclub.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\onboarding.js",
+      "PackagePath": "staticwebassets\\js\\onboarding.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\postpopup.js",
+      "PackagePath": "staticwebassets\\js\\postpopup.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\profile-data.js",
+      "PackagePath": "staticwebassets\\js\\profile-data.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\profile.js",
+      "PackagePath": "staticwebassets\\js\\profile.js"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\signup.js",
+      "PackagePath": "staticwebassets\\js\\signup.js"
     },
     {
       "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\js\\site.js",
@@ -243,6 +339,10 @@
     {
       "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\ORIOLOWO\\RiderProjects\\UniHub\\UniHub\\wwwroot\\logo.svg",
+      "PackagePath": "staticwebassets\\logo.svg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.UniHub.Microsoft.AspNetCore.StaticWebAssets.props",

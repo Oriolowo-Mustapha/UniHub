@@ -33,14 +33,14 @@ public class UserRepository:IUserRepository
         return await _uniHubContext.Users.FindAsync(Id);
     }
 
-    public async Task<bool> GetUserByUserName(string UserName)
+    public async Task<User> GetUserByUserName(string UserName)
     {
-        return await _uniHubContext.Users.AnyAsync(usr=>usr.UserName == UserName);
+        return await _uniHubContext.Users.FindAsync(UserName);
     }
 
-    public async Task<bool> GetUserByEmail(string email)
+    public async Task<User> GetUserByEmail(string email)
     {
-        return await _uniHubContext.Users.AnyAsync(usr => usr.Email == email);
+        return await _uniHubContext.Users.FindAsync(email);
     }
 
     public async Task<bool> DeleteUser(User User)
@@ -50,11 +50,22 @@ public class UserRepository:IUserRepository
         return true;
     }
 
+    public async Task<User> GetUserByPassword(string password)
+    {
+        return await _uniHubContext.Users.FindAsync(password);
+    }
+
+
     public async Task<bool> FollowUser(UserFollow userFollow)
     {
         await _uniHubContext.UserFollows.AddAsync(userFollow);
         await _uniHubContext.SaveChangesAsync();
         return true;
+    }
+
+    public async Task<bool> CheckIfFollow(Guid followingID)
+    {
+        return await _uniHubContext.UserFollows.AnyAsync(usr => usr.FollowingID == followingID);
     }
 
     public async Task<bool> UnFollowUser(UserFollow userFollow)

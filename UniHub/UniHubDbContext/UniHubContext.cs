@@ -82,4 +82,5 @@ public class UniHubContext : DbContext
 	public DbSet<Events> Events { get; set; }
 	public DbSet<Notifications> Notifications { get; set; }
 	public DbSet<UserFollow> UserFollows { get; set; }
+	public DbSet<ClubMembers> ClubMembers { get; set; }
 }

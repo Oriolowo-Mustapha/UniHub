@@ -8,4 +8,5 @@ public class Comments : BaseEntity
 	public int? LikeCount { get; set; }
 	public Posts Posts { get; set; }
 	public ICollection<Likes> Likes = new List<Likes>();
+	
 }

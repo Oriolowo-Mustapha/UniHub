@@ -25,6 +25,11 @@ public class ClubRepository:IClubRepository
     {
         return await _uniHubContext.Clubs.FindAsync(clubId);
     }
+    
+    public async Task<Club> GetClubByName(string clubName)
+    {
+        return await _uniHubContext.Clubs.FindAsync(clubName);
+    }
 
     public async Task<Club> UpdateClub(Club club)
     {
@@ -40,20 +45,34 @@ public class ClubRepository:IClubRepository
         return true;
     }
 
-    public async Task<IList<Club>> GetMembersByClubId(Guid clubId)
+    public async Task<bool> JoinClub(ClubMembers clubMembers)
     {
-        var clubs = await _uniHubContext.Clubs
+        await _uniHubContext.ClubMembers.AddAsync(clubMembers);
+        await _uniHubContext.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<bool> LeaveClub(ClubMembers clubMembers)
+    {
+         _uniHubContext.ClubMembers.Remove(clubMembers);
+        await _uniHubContext.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<IList<ClubMembers>> GetMembersByClubId(Guid clubId)
+    {
+        var clubs = await _uniHubContext.ClubMembers
             .Where(clu => clu.Id == clubId)
-            .Include(clu => clu.Users)
+            .Include(clu => clu.Clubs)
             .AsNoTracking()
             .ToListAsync();
         return clubs;
     }
 
-    public async Task<IList<Club>> GetClubsByMemberId(User user)
+    public async Task<IList<ClubMembers>> GetClubsByMemberId(Guid userId)
     {
-        var clubs = await _uniHubContext.Clubs
-            .Where(clu => clu.Users == user)
+        var clubs = await _uniHubContext.ClubMembers
+            .Where(clu => clu.UserId == userId)
             .Include(clu => clu.Id)
             .AsNoTracking()
             .ToListAsync();

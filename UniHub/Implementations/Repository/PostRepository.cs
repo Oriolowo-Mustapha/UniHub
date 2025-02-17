@@ -21,6 +21,13 @@ public class PostRepository:IPostRepository
         return true;
     }
 
+    public async Task<bool> CreateClubPost(Posts posts)
+    {
+        await _uniHubContext.Posts.AddAsync(posts);
+        await _uniHubContext.SaveChangesAsync();
+        return true;
+    }
+
     public async Task<Posts> GetPostById(Guid PostId)
     {
         return await _uniHubContext.Posts.FindAsync(PostId);
@@ -39,6 +46,16 @@ public class PostRepository:IPostRepository
     {
         var posts = await _uniHubContext.Posts
             .Where(pos => pos.UserID == UserId)
+            .Include(pos => pos.Reposts)
+            .AsNoTracking()
+            .ToListAsync();
+        return posts;
+    }
+
+    public async Task<IList<Posts>> GetPostsByClubId_(Guid ClubId)
+    {
+        var posts = await _uniHubContext.Posts
+            .Where(pos => pos.ClubID == ClubId)
             .Include(pos => pos.Reposts)
             .AsNoTracking()
             .ToListAsync();

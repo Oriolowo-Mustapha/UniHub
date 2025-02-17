@@ -1,0 +1,52 @@
+﻿@model UniHub.DTOs.LogInUserRequestModel
+
+@{
+    ViewBag.Title = "UniHub Login";
+    Layout = "_LoginLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniHub Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">U</div>
+            <span class="logo-text">UniHub</span>
+        </div>
+        <div class="sidebar-content">
+            <h2>Welcome back to your campus community</h2>
+            <p>Log in to UniHub and stay connected with your classmates, events, and campus life.</p>
+        </div>
+        <div class="copyright">© 2025 UniHub. All rights reserved.</div>
+    </div>
+    <div class="main-content">
+        <div class="form-container">
+            <h1>Log in to UniHub</h1>
+            <form id="loginForm" asp-action="Login" asp-controller="User" method="post">
+                <div class="form-group">
+                    <label for="identifier">Email</label>
+                    <input type="text" id="identifier" name="identifier" placeholder="Enter your email" required>
+                    <p class="error-message" id="identifierError"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <p class="error-message" id="passwordError"></p>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+            <p class="forgot-password"><a href="#">Forgot your password?</a></p>
+            <p class="signup-link">Don't have an account? <a asp-area="" asp-controller="User" asp-action="Signup">Sign up here</a></p>
+        </div>
+    </div>
+</div>
+<script src="/js/login.js"></script>
+</body>
+</html>

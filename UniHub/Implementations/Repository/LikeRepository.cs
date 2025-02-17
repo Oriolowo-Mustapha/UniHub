@@ -28,6 +28,11 @@ public class LikeRepository:ILikeRepository
         return true;
     }
 
+    public async Task<Likes> GetLikeByPostId(Guid PostId)
+    {
+        return await _uniHubContext.Likes.FindAsync(PostId);
+    }
+
     public async Task<IList<Likes>> GetAllLikesByUserId(Guid userId)
     {
         var likes = await _uniHubContext.Likes

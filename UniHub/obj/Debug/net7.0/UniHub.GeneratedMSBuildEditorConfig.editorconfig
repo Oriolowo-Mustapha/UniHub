@@ -28,8 +28,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ORIOLOWO/RiderProjects/UniHub/UniHub/Views/Shared/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ORIOLOWO/RiderProjects/UniHub/UniHub/Views/Shared/_SignUpLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWduVXBMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ORIOLOWO/RiderProjects/UniHub/UniHub/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ORIOLOWO/RiderProjects/UniHub/UniHub/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ORIOLOWO/RiderProjects/UniHub/UniHub/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ORIOLOWO/RiderProjects/UniHub/UniHub/Views/User/RegisterUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3RlclVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ORIOLOWO/RiderProjects/UniHub/UniHub/Views/User/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ORIOLOWO/RiderProjects/UniHub/UniHub/Views/_ViewImports.cshtml]

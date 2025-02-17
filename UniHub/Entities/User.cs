@@ -10,8 +10,6 @@ public class User : BaseEntity
     public string ProfilePic { get; set; }
     public string Bio { get; set; }
     public string Level { get; set; }
-    public int? NoPosts { get; set; }
-    public int? NoLikes { get; set; }
     public int? NoFollowers { get; set; }
     public ICollection<UserFollow> Followers { get; set; } = new List<UserFollow>();
     public ICollection<Posts> Posts { get; set; } = new List<Posts>();
@@ -20,4 +18,10 @@ public class User : BaseEntity
     public ICollection<Club> Clubs { get; set; } = new List<Club>();
     public ICollection<Events> Events { get; set; } = new List<Events>();
     public ICollection<Notifications> Notifications { get; set; } = new List<Notifications>();
+    
+    public void updateNoFollowers(int? NoFollowes)
+    {
+        NoFollowes = NoFollowers;
+
+    }
 }

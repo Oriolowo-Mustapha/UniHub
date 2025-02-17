@@ -26,6 +26,11 @@ public class EventRepository:IEventRepository
         return await _uniHubContext.Events.FindAsync(eventId);
     }
 
+    public async Task<Events> GetEventByTitle(string Title)
+    {
+        return await _uniHubContext.Events.FindAsync(Title);
+    }
+
     public async Task<Events> UpdateEvent(Events events)
     {
         _uniHubContext.Events.Update(events);

@@ -9,7 +9,6 @@ public class EventsDto
     public string Description { get; set; }
     public string Location { get; set; }
     public DateTime StartEvent { get; set; }
-    public DateTime EndEvent { get; set; }
     public Guid Host { get; set; }
     public Guid AssociatedClubs { get; set; }
     public DateTime DateOfCreation { get; set; }
@@ -30,6 +29,11 @@ public class CreateEventsDtoRequestModel
     
     [Required]
     public Guid AssociatedClubs { get; set; }
+    
+    [Required]
+    [DataType(DataType.DateTime)]
+    public DateTime StartEvent { get; set; }
+    
 }
 
 public class UpdateEventsDtoRequestModel

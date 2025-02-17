@@ -8,16 +8,17 @@ public interface IUserService
     public Task<BaseResponse<bool>> RegisterUser(CreateUserRequestModel User);
     public Task<BaseResponse<User>> EditUser(Guid UserId , UpdateUserRequestModel User);
     public Task<BaseResponse<UserDto>> GetUserByID(Guid Id);
-    public Task<BaseResponse<bool>> GetUserByUserName(string UserName);
-    public Task<BaseResponse<bool>> GetUserByEmail(string email);
-    public Task<BaseResponse<bool>> DeleteUser(UserDto userDto);
-    public Task<BaseResponse<UserDto>>  LogIn(string email, LogInUserRequestModel model);
-    public Task<BaseResponse<UserDto>> SignUp(SignUpUserRequestModel model);
-    public Task<BaseResponse<bool>> ChangePassword(Guid userId,string newPassword, ChangePasswordRequestModel model);
-    public Task<BaseResponse<bool>> UpdateProfilePic(Guid userId, string imagePath, UpdateProfilePicRequestModel model);
-    public Task<BaseResponse<bool>> UpdateBio(Guid userId, string Bio, UpdateBioRequestModel model);
-    public Task<BaseResponse<UserFollow>> FollowUser(Guid FollowersId, Guid FollowingId);
-    public Task<BaseResponse<UserFollow>> UnFollowUser(Guid FollowersId, Guid FollowingId);
+    public Task<BaseResponse<UserDto>> GetUserByUserName(string UserName);
+    public Task<BaseResponse<UserDto>> GetUserByEmail(string email);
+    public Task<BaseResponse<bool>> DeleteUser(Guid userId);
+    public Task<BaseResponse<User>>  LogIn(LogInUserRequestModel model);
+    public Task<BaseResponse<User>> SignUp(SignUpUserRequestModel model);
+    public Task<BaseResponse<bool>> ChangePassword(Guid userId,ChangePasswordRequestModel model);
+    public Task<BaseResponse<bool>> UpdateProfilePic(Guid userId,UpdateProfilePicRequestModel model);
+    public Task<BaseResponse<bool>> UpdateBio(Guid userId, UpdateBioRequestModel model);
+    public Task<BaseResponse<bool>> FollowUser(Guid FollowersId, Guid FollowingId);
+    public Task<bool> CheckIfFollow(Guid followingID);
+    public Task<BaseResponse<bool>> UnFollowUser(Guid FollowersId, Guid FollowingId);
     public Task<BaseResponse<IList<UserFollow>>> GetAllFollowers();
     public Task<BaseResponse<IList<User>>> UsersSuggestion(Guid UserId);   
 }

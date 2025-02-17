@@ -8,10 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Implementations\Services\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.20">
         <PrivateAssets>all</PrivateAssets>

@@ -9,6 +9,5 @@ public interface IEventService
     public Task<BaseResponse<EventsDto>> GetEventById(Guid eventId); 
     public Task<BaseResponse<Events>> UpdateEvent(Guid eventId,UpdateEventsDtoRequestModel model); 
     public Task<BaseResponse<bool>> DeleteEvent(Guid eventId); 
-    public Task<BaseResponse<EventsDto>> GetEventByUserId(Guid userId); 
-    public Task<BaseResponse<EventsDto>> GetEventByClubId(Guid clubId); 
+    public Task<BaseResponse<IList<EventsDto>>> GetEventByClubId(Guid clubId); 
 }

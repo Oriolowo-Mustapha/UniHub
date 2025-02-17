@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using UniHub.Entities;
 
 namespace UniHub.DTOs;
 
@@ -9,9 +10,9 @@ public class ClubDto
     public string Desciption { get; set; }
     public Guid CreatorID { get; set; }
     public int? MemberCount { get; set; }
-    public IFormFile ProfilePic { get; set; }
+    public string ProfilePic { get; set; }
     public DateTime DateOfCreation { get; set; }
-    public ICollection<UserDto> Members { get; set; } = new List<UserDto>();
+    public ICollection<ClubMembers> Members { get; set; } = new List<ClubMembers>();
 }
 
 public class CreateClubRequestModel
